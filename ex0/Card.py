@@ -13,6 +13,8 @@ class Rarity(Enum):
 
 class Type(Enum):
     CREATURE = 0
+    SPELL = 1
+    ARTIFACT = 2
 
 
 class Card(ABC):
