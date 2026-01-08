@@ -9,7 +9,7 @@ if (__name__ == "__main__"):
     print("- Combatable: ['attack', 'defend', 'get_combat_stats']")
     print("- Magical: ['cast_spell', 'channel_mana', 'get_magic_stats']\n")
 
-    war = EliteCard("Arcane Warrior", 8, Rarity.EPIC)
+    war = EliteCard("Arcane Warrior", 8, Rarity.EPIC, 5, 3)
     en = CreatureCard("Enemy", 1, Rarity.COMMON, 1, 2)
     en1 = CreatureCard("Enemy1", 1, Rarity.COMMON, 1, 2)
     en2 = CreatureCard("Enemy2", 1, Rarity.COMMON, 1, 2)

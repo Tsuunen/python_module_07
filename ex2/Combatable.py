@@ -3,6 +3,10 @@ from typing import Dict
 
 
 class Combatable(ABC):
+    def __init__(self, attack, defense):
+        self.damage = attack
+        self.defense = defense
+
     @abstractmethod
     def attack(self, target) -> Dict:
         pass
