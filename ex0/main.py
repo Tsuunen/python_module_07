@@ -9,9 +9,12 @@ if (__name__ == "__main__"):
     print(dragon.get_card_info())
     print("\nPlaying Fire Dragon with 6 mana available:")
     print("Playable:", dragon.is_playable(6))
-    print("Play result:", dragon.play({}))
-    print("\nFire Dragon attacks Goblin Warrior:")
     gob = CreatureCard("Gobelin Warrior", 1, Rarity.COMMON, 2, 3)
+    print("Play result:", dragon.play({
+        "target": gob,
+        "mana_left": 10
+    }))
+    print("\nFire Dragon attacks Goblin Warrior:")
     print("Attack result:", dragon.attack_target(gob))
     print("\nTesting insufficient mana (3 available):")
     print("Playable:", dragon.is_playable(3))

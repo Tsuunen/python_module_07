@@ -16,6 +16,13 @@ class CreatureCard(Card):
         self.type = Type.CREATURE
 
     def play(self, game_state: Dict) -> Dict:
+        if (not self.is_playable(game_state["mana_left"])):
+            return ({
+                "card_played": None,
+                "mana_used": 0,
+                "effect": None
+            })
+        self.attack_target(game_state["target"])
         return ({
             "card_played": self.name,
             "mana_used": self.cost,
